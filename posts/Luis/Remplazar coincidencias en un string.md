@@ -18,3 +18,7 @@ let poema = `
 ```
 let nuevoPoema = poema.replace(/negro/gm, 'azul marino');
 ```
+
+### Y eso es todo
+
+![código de ejemplo de string replace con referencias a Doctor Strange](https://appdividend.com/wp-content/uploads/2018/09/String-Replace-method-in-Javascript.png)
