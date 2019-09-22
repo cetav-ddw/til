@@ -8,6 +8,6 @@
 
 `gatsby new mi-proyecto-patito https://github.com/gatsbyjs/gatsby-starter-hello-world`
 
-#### Y eso todo por hoy, muchas gracias
+#### Y eso es todo por hoy, muchas gracias
 
 ![Cover del protagonista Leonardo Dicaprio en la película The Great Gatsby](https://media.timeout.com/images/105170238/630/472/image.jpg)
