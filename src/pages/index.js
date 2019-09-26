@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import Arti from '../components/Arti'
+import './reset.scss'
+import './index.scss'
 
 const IndexPage = ({ data }) => (
   <Arti>

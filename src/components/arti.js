@@ -1,5 +1,5 @@
 import React from 'react';
-import './arti.css';
+import './arti.scss';
 
 export default ({children}) =>
 
