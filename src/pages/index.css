@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap');
+
+:root {
+    --highlight: #FDC02F;
+    --bg-1: #000;
+    --space: 15px;
+}
+
+* {
+    font-family: 'Lustria', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pagination-buttons {
+    background: var(--bg-1);
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 1.5px;
+    text-decoration: none;
+}
+
+.pagination-buttons:hover,
+.selected-page {
+    cursor: pointer;
+    color: var(--bg-1);
+    background: var(--highlight);
+}
+
+.page-next,
+.page-prev {
+    display: inline-block;
+}
+
+.page-next {
+    margin-left: var(--space);
+}
+
+.page-prev {
+    margin-right: var(--space);
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap');
+
+:root {
+  --title: #FDC02F;
+  --line: #DEDEDE;
+  --link:#641FE0;
+}
+
+small {
+  display: block;
+}
+
+.arti__title {
+  --font-size: 2rem;
+  font-family: 'Lustria';
+  font-size: var(--font-size);
+  max-width: 60%;
+  background-image: url('../images/background.svg');
+  line-height: 1.5;
+  display: inline;
+  background-size: 140px;
+  background-repeat-y: no-repeat;
+  background-position-y: 20px;
+}
+
+.arti__title span {
+  padding-right: calc(var(--font-size) / 5);
+  position: relative;
+  display: inline-block;
+}
+
+.arti__title span::before {
+  border-top: calc(var(--font-size) / 2.5) solid  var(--title);
+  content: '';
+  margin: 0 auto;
+  position: absolute;
+  top: calc(var(--font-size) / 2.1);
+  width: 100%;
+  z-index: -1;
+  text-align: center;
+}
+
+.arti__author {
+  margin: 0;
+  font-family: 'Open Sans';
+  margin-top: -27px;
+  margin-bottom: 8px;
+  margin-left: 55px;
+}
+
+.arti__avatar {
+  display: block;
+  height: 50px;
+  border-radius: 50%;
+  width: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+
+hr {
+  border: 1px var(--line) solid;
+  margin-top: 16px;
+  margin-bottom: 18px;
+}
+
+.author__name {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.container-arti>div img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .arti__title {
+    max-width: 100%;
+  }
+}
