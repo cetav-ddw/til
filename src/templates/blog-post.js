@@ -15,6 +15,7 @@ export default function Template({ data }) {
       <small>
         Creado por {post.frontmatter.author} en {post.frontmatter.date}
       </small>
+      {/* {(console.log(post.html))} */}
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Arti>
   )
