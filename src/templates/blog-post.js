@@ -12,9 +12,9 @@ export default function Template({ data }) {
       <SEO title={post.frontmatter.title} />
       <Link to='/'>Go Back</Link>
       <h1 className='arti__title'>{post.frontmatter.title}</h1>
-      <h4>
-        Posted by {post.frontmatter.author} on {post.frontmatter.date}
-      </h4>
+      <small>
+        Creado por {post.frontmatter.author} en {post.frontmatter.date}
+      </small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Arti>
   )

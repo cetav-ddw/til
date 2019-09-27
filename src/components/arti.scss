@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap');
+
 .arti {
     max-width: 720px;
     margin: auto;
+    padding: 25px;
+    box-sizing: border-box;
 
-    small {
+    & > * {
         display: block;
+        margin: 25px 0;
     }
 
     img {
         width: 100%;
         display: block;
     }
+
+    * { font-family: 'Open Sans', sans-serif }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Lustria', serif }
+    h6 { font-size: 1rem }
+    h5 { font-size: 1.25rem }
+    h4 { font-size: 1.5rem }
+    h3 { font-size: 2rem }
+    h2 { font-size: 2.25rem }
+    h1 { font-size: 2.5rem }
+
 }
