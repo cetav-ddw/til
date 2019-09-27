@@ -21,7 +21,7 @@ export default function Template({ data }) {
       <Link to='/'>Go Back</Link>
       <h1 className='arti__title'>{post.frontmatter.title}</h1>
       <small>
-        Creado por {post.frontmatter.author} en {post.frontmatter.date}
+        {post.frontmatter.author} en {post.frontmatter.date}
       </small>
       {/* {(console.log(post.html))} */}
       <div dangerouslySetInnerHTML={{ __html: reformatted }} />

@@ -22,11 +22,12 @@ const IndexPage = ({ data }) => (
             <h3 className='arti__title'>{post.node.frontmatter.title}</h3>
           </Link>
           <small>
-            Creado por {post.node.frontmatter.author} en {' '}
+            Por {post.node.frontmatter.author} en {' '}
             {post.node.frontmatter.date}
           </small>
-          <div dangerouslySetInnerHTML={{__html: reformatted}}/>
-          <hr/>
+          <hr className="arti__title--line" />
+          <div dangerouslySetInnerHTML={{ __html: reformatted }} />
+          <hr className="arti__title--endline" />
         </div>
       );
     })}
