@@ -21,16 +21,6 @@
     img {
         width: 100%;
         display: block;
-    }
-
-    h6 { font-size: 1rem }
-    h5, th { font-size: 1.25rem }
-    h4 { font-size: 1.5rem }
-    h3 { font-size: 2rem }
-    h2 { font-size: 2.25rem }
-    h1 { font-size: 2.5rem }
-    a { color: #307cb1 }
-    img {
         margin: 25px 0;
     }
 
@@ -40,8 +30,15 @@
         padding: 25px;
     }
 
+    hr {
+        background: #141d39;
+    }
+
+    a {
+        color: #307cb1;
+    }
+
     code {
-        font-weight: bold;
         color: #000;
         display: block;
         background: #f7f7f7;
