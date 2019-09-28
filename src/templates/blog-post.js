@@ -18,7 +18,7 @@ export default function Template({ data }) {
   return (
     <Arti>
       <SEO title={post.frontmatter.title} />
-      <Link to='/'>Go Back</Link>
+      <Link to='/' className="arti__line">Go Back</Link>
       <h1 className='arti__title'>{post.frontmatter.title}</h1>
       <small>
         {post.frontmatter.author} en {post.frontmatter.date}

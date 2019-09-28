@@ -50,3 +50,20 @@ font-family: "Open Sans", sans-serif;
   border: 3px solid var(--lineEnd);
 
 }
+.arti__line{
+  position: relative;
+  overflow: hidden;
+}
+.arti__line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 12%;
+  height: 2px;
+  background: var(--link);
+  transition: left .4s;
+  }
+.arti__line:hover::after{
+  left: 0;
+}
