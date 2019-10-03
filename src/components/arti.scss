@@ -1,20 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap");
+@import '../helpers';
 
 .arti {
   max-width: 680px;
   margin: auto;
   padding: 25px;
   box-sizing: border-box;
+  @include fontText;
+  color: #333;
+  letter-spacing: 1px;
+  line-height: 1.5;
 
-  & > * {
+  .arti__line, p, img {
     display: block;
     margin: 25px 0;
-  }
-
-  * {
-font-family: "Open Sans", sans-serif;
-    color: #333;
-    letter-spacing: 1px;
   }
 
   img {
@@ -42,28 +40,46 @@ font-family: "Open Sans", sans-serif;
     padding: 25px;
   }
 }
+
+.arti__title {
+  line-height: 1.25;
+}
+
 .arti__title--line {
-  border: 1px solid var(--line);
+  border: 1px solid $line;
   margin-top: 12px;
 }
+
 .arti__title--endline {
-  border: 3px solid var(--lineEnd);
+  border: 3px solid $lineEnd;
 
 }
-.arti__line{
+
+.arti__line {
   position: relative;
   overflow: hidden;
-}
-.arti__line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  width: 12%;
-  height: 2px;
-  background: var(--link);
-  transition: left .4s;
+  color: $link;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -12%;
+    width: 12%;
+    height: 2px;
+    background: $link;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
   }
-.arti__line:hover::after{
-  left: 0;
+
+  &:hover::after {
+    left: 0;
+  }
+}
+
+.arti__title {
+  color: #333;
 }

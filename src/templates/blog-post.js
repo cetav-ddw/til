@@ -1,18 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import SEO from '../components/seo'
-import Arti from '../components/Arti'
-import putValuesHTML from '../utils/html-parse-options';
-import './blog-post.scss'
+import React from 'react';
+import Link from 'gatsby-link';
+import SEO from '../components/seo';
+import Author from '../components/author';
+import Arti from '../components/arti';
+import './blog-post.scss';
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
-  const reformatted = putValuesHTML({
-    selector: 'a',
-    attrib: 'target',
-    value: '_blank',
-    html: post.html
-  });
+  const post = data.markdownRemark;
   // To return all the anchors with a target="_blank"
 
   return (
@@ -20,11 +14,8 @@ export default function Template({ data }) {
       <SEO title={post.frontmatter.title} />
       <Link to='/' className="arti__line">Go Back</Link>
       <h1 className='arti__title'>{post.frontmatter.title}</h1>
-      <small>
-        {post.frontmatter.author} en {post.frontmatter.date}
-      </small>
-      {/* {(console.log(post.html))} */}
-      <div dangerouslySetInnerHTML={{ __html: reformatted }} />
+      <Author author={post.frontmatter.author} date={post.frontmatter.date} />
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Arti>
   )
 }
