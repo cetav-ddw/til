@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 import SEO from '../components/seo';
 import Author from '../components/author';
 import Arti from '../components/arti';
+import Header from '../components/header';
+import Footer from '../components/footer';
 import './blog-post.scss';
 
 export default function Template({ data }) {
@@ -10,13 +12,17 @@ export default function Template({ data }) {
   // To return all the anchors with a target="_blank"
 
   return (
-    <Arti>
-      <SEO title={post.frontmatter.title} />
-      <Link to='/' className="arti__line">Go Back</Link>
-      <h1 className='arti__title'>{post.frontmatter.title}</h1>
-      <Author author={post.frontmatter.author} date={post.frontmatter.date} />
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Arti>
+    <>
+      <Header/>
+      <Arti>
+        <SEO title={post.frontmatter.title} />
+        <Link to='/' className="arti__line">Go Back</Link>
+        <h1 className='arti__title'>{post.frontmatter.title}</h1>
+        <Author author={post.frontmatter.author} date={post.frontmatter.date} />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Arti>
+      <Footer/>
+    </>
   )
 }
 

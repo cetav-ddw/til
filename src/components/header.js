@@ -1,12 +1,13 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import './header.scss';
 
-const Header = ({ siteTitle = 'TIL | CETAV web'}) => (
+const Header = () => (
   <header>
-    <div>
+    <div className="header-wrapper">
       <h1 style={{ margin: 0 }}>
-        <Link to='/'> {siteTitle} </Link>
+        <Link to='/'> TIL | CETAV </Link>
       </h1>
     </div>
   </header>

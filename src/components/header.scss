@@ -1,0 +1,12 @@
+@import '../helpers.scss';
+
+.header-wrapper {
+    @include fontTitle;
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+    padding: 25px;
+    a {
+        color: $link;
+    }
+}
