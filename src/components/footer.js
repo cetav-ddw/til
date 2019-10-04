@@ -6,7 +6,7 @@ const Footer = () => (
   <footer>
     <div className="footer-wrapper">
       <h3 style={{ margin: 0 }}>
-        <Link to='/'> CETAV | Visítanos </Link>
+        <Link to='https://www.parquelalibertad.org/cetav/'> CETAV | Visítanos </Link>
       </h3>
     </div>
   </footer>
