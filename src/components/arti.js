@@ -1,14 +1,8 @@
 import React from 'react';
-import Header from './header';
 import './arti.scss';
 
-export default ({children}) =>
+const Arti = ({ children }) => (
+    <div className="arti"> {children} </div>
+)
 
-<section className="container">
-    
-    <Header/>
-    <div className="arti">
-        {children}
-    </div>
-
-</section>
+export default Arti;

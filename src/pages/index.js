@@ -1,37 +1,27 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
-import putValuesHTML from '../utils/html-parse-options';
-import '../components/arti.scss';
+import Author from '../components/author';
+import Arti from '../components/arti';
 import './index.scss';
 
 const IndexPage = ({ data }) => (
-  <div>
+  <Arti>
     <SEO title='Home' />
-    {data.allMarkdownRemark.edges.map(post => {
-      // To return all the anchors with a target="_blank"
-      const reformatted = putValuesHTML({
-        selector: 'a',
-        attrib: 'target',
-        value: '_blank',
-        html: post.node.html
-      });
+    {data.allMarkdownRemark.edges.map(({node: post}) => {
       return (
-        <div className='arti' key={post.node.id}>
-          <Link to={post.node.frontmatter.path}>
-            <h3 className='arti__title'>{post.node.frontmatter.title}</h3>
+        <div key={post.id}>
+          <Link to={post.frontmatter.path}>
+            <h3 className='arti__title'>{post.frontmatter.title}</h3>
           </Link>
-          <small>
-            Por {post.node.frontmatter.author} en {' '}
-            {post.node.frontmatter.date}
-          </small>
+          <Author author={post.frontmatter.author} date={post.frontmatter.date} />
           <hr className="arti__title--line" />
-          <div dangerouslySetInnerHTML={{ __html: reformatted }} />
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr className="arti__title--endline" />
         </div>
       );
     })}
-  </div>
+  </Arti>
 )
 
 export const pageQuery = graphql`
