@@ -15,3 +15,23 @@ resulta mejor hacer un deploy de una app
 en una plataforma como Netlify.
 
 [Así que aquí va un video que dice cómo hacerlo](https://www.youtube.com/watch?v=hQAu0YEIF0g)
+
+*El siguiente código es parte de lo que se escribió en el video*
+```javascript
+const express = require('express');
+const serverless = require('serverless-http');
+const app = express();
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    res.json({
+        success: true,
+        error: null,
+        data: 'BUMP OF CHICKEN「Hello,world!」'
+    });
+});
+
+app.use('/.netlify/functions/api', router);
+
+module.exports.handler = serverless(app);
+```
