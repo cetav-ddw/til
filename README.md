@@ -2,18 +2,21 @@
 
 **These steps are a must**
 
-1. Clone the repo
-2. Switch the branch to develop in your local env
-3. Go to /src/posts directory and add a file with the .md extension
-4. Inside the file write down data with this body type
+1. Cloná el repositorio
+2. En el ambiente local cambiá el branch a develop
+3. Andá al directorio /src/posts y añadí un archivo de markdown
+4. Que el archivo tenga este formato: tu-nombre.fecha.md **(formato de la fecha: yyyy-mm-dd)**
+5. Dentro del archivo escribí los datos que tengan un cuerpo como el que aparece a continuación
 ```
 ---
-path: "/Your different, special and unique post title"
+path: "/path-unico-en-minuscula-sin-caracteres-especiales"
 date: "2019-10-02"
-title: "Your post title"
-author: "LuisArmando-TestCoder"
+title: "Cualquier título, donde el path idealmente esté relacionado"
+author: "Tu usuario de Github justo como se escribe"
 ---
 ```
-6. You could insert data as markdown, if you don't know md just follow this guide https://www.markdownguide.org
-7. Now you should add, commit and push to the target remote branch
-8. In Github make a pull request to master and wait for the repo administrator to give you feedback or to merge changes
+6. Lo siguiente es añadir datos con el formato de markdown, aquí una guía: https://www.markdownguide.org
+7. Una vez tengás todo listo, git add, commit, push a origin develop
+8. En Github, hacé un pull request y esperá a que el administrador del repositorio te de feedback o mergee los cambios en master
+
+Nota: Te podés servir de ejemplo con el primer post de todos -> /src/posts/Luis.2019-10-02.md

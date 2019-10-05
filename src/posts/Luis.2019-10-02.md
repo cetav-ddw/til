@@ -1,5 +1,5 @@
 ---
-path: "/Hacer-deploy-de-un-app-de-Node-con-Netlify"
+path: "/hacer-deploy-de-un-app-de-node-con-netlify"
 date: "2019-10-02"
 title: "Hacer deploy de un app de Node con Netlify"
 author: "LuisArmando-TestCoder"
