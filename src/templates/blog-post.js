@@ -8,8 +8,7 @@ import './blog-post.scss';
 
 export default function Template({ data }) {
   const post = data.markdownRemark;
-  // To return all the anchors with a target="_blank"
-
+  // post.frontmatter.tags; // is available now!
   return (
     <>
       <Header/>
@@ -32,7 +31,7 @@ export const postQuery = graphql`
         path
         title
         author
-        date
+        tags
       }
     }
   }

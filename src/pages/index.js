@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => (
     <Article>
       <SEO title='Home' />
       {data.allMarkdownRemark.edges.map(({node: post}) => {
+        // post.frontmatter.tags; // is available now!
         return (
           <div key={post.id}>
             <Link to={post.frontmatter.path}>
@@ -40,6 +41,7 @@ export const pageQuery = graphql`
             title
             date
             author
+            tags
           }
         }
       }
