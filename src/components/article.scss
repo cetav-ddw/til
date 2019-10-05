@@ -1,6 +1,6 @@
 @import '../helpers';
 
-.arti {
+.article {
   max-width: 680px;
   margin: auto;
   padding: 25px;
@@ -10,7 +10,7 @@
   letter-spacing: 1px;
   line-height: 1.5;
 
-  .arti__line, p, img {
+  .article__line, p, img {
     display: block;
     margin: 25px 0;
   }
@@ -41,21 +41,21 @@
   }
 }
 
-.arti__title {
+.article__title {
   line-height: 1.25;
 }
 
-.arti__title--line {
+.article__title--line {
   border: 1px solid $line;
   margin-top: 12px;
 }
 
-.arti__title--endline {
+.article__title--endline {
   border: 3px solid $lineEnd;
 
 }
 
-.arti__line {
+.article__line {
   position: relative;
   overflow: hidden;
   color: $link;
@@ -80,6 +80,6 @@
   }
 }
 
-.arti__title {
+.article__title {
   color: #333;
 }

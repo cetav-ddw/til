@@ -2,31 +2,29 @@ import React from 'react';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
 import Author from '../components/author';
-import Arti from '../components/arti';
+import Article from '../components/article';
 import Header from '../components/header';
-import Footer from '../components/footer';
 import './index.scss';
 
 const IndexPage = ({ data }) => (
   <>
     <Header/>
-    <Arti>
+    <Article>
       <SEO title='Home' />
       {data.allMarkdownRemark.edges.map(({node: post}) => {
         return (
           <div key={post.id}>
             <Link to={post.frontmatter.path}>
-              <h3 className='arti__title'>{post.frontmatter.title}</h3>
+              <h3 className='article__title'>{post.frontmatter.title}</h3>
             </Link>
             <Author author={post.frontmatter.author} date={post.frontmatter.date} />
-            <hr className="arti__title--line" />
+            <hr className="article__title--line" />
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr className="arti__title--endline" />
+            <hr className="article__title--endline" />
           </div>
         );
       })}
-    </Arti>
-    <Footer/>
+    </Article>
   </>
 )
 

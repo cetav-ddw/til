@@ -4,11 +4,9 @@ import React from 'react';
 import './header.scss';
 
 const Header = () => (
-  <header>
-    <div className="header-wrapper">
-      <h1 style={{ margin: 0 }}>
-        <Link to='/'> TIL | CETAV </Link>
-      </h1>
+  <header className="main-header">
+    <div className="main-header__wrapper">
+      <Link to='/'></Link>
     </div>
   </header>
 )
