@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
   <>
     <Header/>
     <Article>
-      <SEO title='Home' />
+      <SEO title='Inicio' />
       {data.allMarkdownRemark.edges.map(({node: post}) => {
         // post.frontmatter.tags; // is available now!
         return (
