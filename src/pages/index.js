@@ -18,10 +18,8 @@ const IndexPage = ({ data }) => (
             <Link to={post.frontmatter.path}>
               <h3 className='article__title'>{post.frontmatter.title}</h3>
             </Link>
-            <Author author={post.frontmatter.author} date={post.frontmatter.date} />
-            <hr className="article__title--line" />
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr className="article__title--endline" />
+            <Author additionalClass="article__title--line" author={post.frontmatter.author} date={post.frontmatter.date} />
+            <div className="article__title--endline" dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         );
       })}

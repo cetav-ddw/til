@@ -42,12 +42,11 @@
 }
 
 .article__title--line {
-  border: 1px solid $line;
-  margin-top: 12px;
+  border-bottom: 2px solid $line;
 }
 
 .article__title--endline {
-  border: 3px solid $darkPurple;
+  border-bottom: 6px solid #141d39;
 
 }
 
