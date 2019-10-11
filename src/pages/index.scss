@@ -11,8 +11,8 @@ body {
     background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-    background: $lineEnd; 
+    background: $darkPurple; 
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: $lineEnd / 1.25; 
+    background: $darkPurple / 1.25; 
 }
