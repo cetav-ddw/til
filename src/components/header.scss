@@ -1,7 +1,7 @@
 @import '../helpers.scss';
 
 .main-header__wrapper {
-    font-family: 'Lustria', serif;
+    font-family: $fontTitle;
     text-align: center;
     width: 100%;
     max-width: 780px;
