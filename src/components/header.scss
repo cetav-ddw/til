@@ -1,0 +1,28 @@
+@import '../helpers.scss';
+
+.main-header__wrapper {
+    font-family: $fontTitle;
+    text-align: center;
+    width: 100%;
+    max-width: 780px;
+    margin: auto;
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+
+    a {
+        display: block;
+        height: 76px;
+        width: 171px;
+        background-image: url('../images/logo.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

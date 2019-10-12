@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap');
+@import '../helpers';
 
-:root {
-  --title: #FDC02F;
-  --line: #DEDEDE;
-  --link:#641FE0;
-  --lineEnd:#141D39;
-}
-
-.arti__title {
-  --font-size: 2.25rem;
-  font-family: 'Lustria';
-  font-size: var(--font-size);
+.article__title {
+  font-family: $fontTitle;
+  $font-size: 2.25rem;
+  font-size: $font-size;
   background-image: url('../images/background.svg');
-  line-height: 1.5;
   display: inline;
   background-size: 95px;
   background-repeat-y: no-repeat;
-  background-position-y: calc(var(--font-size) / 2.75);
+  background-position-y: $font-size / 2.75;
+  transition: 0.5s;
+}
+
+a .article__title:hover {
+  background-position-y: 42px;
 }

@@ -17,6 +17,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               title
               date
               author
+              tags
             }
           }
         }

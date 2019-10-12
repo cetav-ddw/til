@@ -1,0 +1,80 @@
+@import '../helpers';
+
+.article {
+  max-width: 680px;
+  margin: auto;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: $fontText;
+  color: #333;
+  line-height: 1.5;
+
+  .article__line, p, img {
+    display: block;
+    margin: 25px 0;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 25px 0;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 25px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  code {
+    display: block;
+  }
+}
+
+.article__title {
+  line-height: 1.25;
+}
+
+.article__title--line {
+  border-bottom: 2px solid $line;
+}
+
+.article__title--endline {
+  border-bottom: 6px solid #141d39;
+
+}
+
+.article__line {
+  position: relative;
+  overflow: hidden;
+  color: $link;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -12%;
+    width: 12%;
+    height: 2px;
+    background: $link;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+}
+
+.article__title {
+  color: #333;
+}

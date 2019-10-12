@@ -1,31 +1,25 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import SEO from '../components/seo'
-import Arti from '../components/Arti'
-import putValuesHTML from '../utils/html-parse-options';
-import './blog-post.scss'
+import React from 'react';
+import Link from 'gatsby-link';
+import SEO from '../components/seo';
+import Author from '../components/author';
+import Article from '../components/article';
+import Header from '../components/header';
+import './blog-post.scss';
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
-  const reformatted = putValuesHTML({
-    selector: 'a',
-    attrib: 'target',
-    value: '_blank',
-    html: post.html
-  });
-  // To return all the anchors with a target="_blank"
-
+  const post = data.markdownRemark;
+  // post.frontmatter.tags; // is available now!
   return (
-    <Arti>
-      <SEO title={post.frontmatter.title} />
-      <Link to='/' className="arti__line">Go Back</Link>
-      <h1 className='arti__title'>{post.frontmatter.title}</h1>
-      <small>
-        {post.frontmatter.author} en {post.frontmatter.date}
-      </small>
-      {/* {(console.log(post.html))} */}
-      <div dangerouslySetInnerHTML={{ __html: reformatted }} />
-    </Arti>
+    <>
+      <Header/>
+      <Article>
+        <SEO title={post.frontmatter.title} />
+        <Link to='/' className="article__line">Go Back</Link>
+        <h1 className='article__title'>{post.frontmatter.title}</h1>
+        <Author author={post.frontmatter.author} date={post.frontmatter.date} />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Article>
+    </>
   )
 }
 
@@ -37,7 +31,7 @@ export const postQuery = graphql`
         path
         title
         author
-        date
+        tags
       }
     }
   }

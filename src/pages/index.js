@@ -1,37 +1,30 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
-import putValuesHTML from '../utils/html-parse-options';
-import '../components/arti.scss';
+import Author from '../components/author';
+import Article from '../components/article';
+import Header from '../components/header';
 import './index.scss';
 
 const IndexPage = ({ data }) => (
-  <div>
-    <SEO title='Home' />
-    {data.allMarkdownRemark.edges.map(post => {
-      // To return all the anchors with a target="_blank"
-      const reformatted = putValuesHTML({
-        selector: 'a',
-        attrib: 'target',
-        value: '_blank',
-        html: post.node.html
-      });
-      return (
-        <div className='arti' key={post.node.id}>
-          <Link to={post.node.frontmatter.path}>
-            <h3 className='arti__title'>{post.node.frontmatter.title}</h3>
-          </Link>
-          <small>
-            Por {post.node.frontmatter.author} en {' '}
-            {post.node.frontmatter.date}
-          </small>
-          <hr className="arti__title--line" />
-          <div dangerouslySetInnerHTML={{ __html: reformatted }} />
-          <hr className="arti__title--endline" />
-        </div>
-      );
-    })}
-  </div>
+  <>
+    <Header/>
+    <Article>
+      <SEO title='Inicio' />
+      {data.allMarkdownRemark.edges.map(({node: post}) => {
+        // post.frontmatter.tags; // is available now!
+        return (
+          <div key={post.id}>
+            <Link to={post.frontmatter.path}>
+              <h3 className='article__title'>{post.frontmatter.title}</h3>
+            </Link>
+            <Author additionalClass="article__title--line" author={post.frontmatter.author} date={post.frontmatter.date} />
+            <div className="article__title--endline" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        );
+      })}
+    </Article>
+  </>
 )
 
 export const pageQuery = graphql`
@@ -46,6 +39,7 @@ export const pageQuery = graphql`
             title
             date
             author
+            tags
           }
         }
       }
