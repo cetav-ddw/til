@@ -1,13 +1,14 @@
 @import '../helpers';
 
 .article {
-  max-width: 680px;
-  margin: auto;
-  padding: 25px;
   box-sizing: border-box;
-  font-family: $fontText;
   color: #333;
+  font-family: $fontText;
   line-height: 1.5;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 25px;
+  
 
   .article__line, p, img {
     display: block;

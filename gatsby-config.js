@@ -1,14 +1,14 @@
 module.exports = {
   pathPrefix: "/til",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `"Today I learned" u "Hoy aprendí", es un formato de blog que permite a los publicadores crear contenido acerca de un aprendizaje adquirido, también abreviado como TIL. Este es el TIL de los estudiantes del CETAV`,
-    author: `@gatsbyjs`,
+    title: `Today I Learned - CETAV`,
+    description: `TIL, blog posts de los estudiantes de Web del Centro de Tecnología y Artes Visuales (CETAV)`,
+    author: `@leivajd`, // Agregar usuario de Twitter para TIL CETAV
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-catch-links',
+    "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,7 +18,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-transformer-remark',
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
