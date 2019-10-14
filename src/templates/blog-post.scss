@@ -1,0 +1,17 @@
+@import '../helpers';
+
+.article__title {
+  font-family: $fontTitle;
+  $font-size: 2.25rem;
+  font-size: $font-size;
+  background-image: url('../images/background.svg');
+  display: inline;
+  background-size: 95px;
+  background-repeat-y: no-repeat;
+  background-position-y: $font-size / 2.75;
+  transition: .5s;
+}
+
+a .article__title:hover {
+  background-position-y: 42px;
+}

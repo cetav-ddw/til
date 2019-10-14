@@ -1,0 +1,81 @@
+@import '../helpers';
+
+.article {
+  box-sizing: border-box;
+  color: #333;
+  font-family: $fontText;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 25px;
+  
+
+  .article__line, p, img {
+    display: block;
+    margin: 25px 0;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 25px 0;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 25px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  code {
+    display: block;
+  }
+}
+
+.article__title {
+  line-height: 1.25;
+}
+
+.article__title--line {
+  border-bottom: 2px solid $line;
+}
+
+.article__title--endline {
+  border-bottom: 6px solid #141d39;
+
+}
+
+.article__line {
+  position: relative;
+  overflow: hidden;
+  color: $link;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -12%;
+    width: 12%;
+    height: 2px;
+    background: $link;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+}
+
+.article__title {
+  color: #333;
+}
