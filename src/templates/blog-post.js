@@ -8,19 +8,24 @@ import "./blog-post.scss"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
-  // post.frontmatter.tags; // is available now!
+
   return (
     <>
+      <SEO title={post.frontmatter.title} />
       <Header />
-      <Article>
-        <SEO title={post.frontmatter.title} />
-        <Link to="/" className="article__line">
-          Inicio
-        </Link>
-        <h1 className="article__title">{post.frontmatter.title}</h1>
-        <Author author={post.frontmatter.author} date={post.frontmatter.date} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Article>
+      <main>
+        <Article>
+          <Link to="/" className="article__line">
+            Inicio
+          </Link>
+          <h1 className="article__title">{post.frontmatter.title}</h1>
+          <Author
+            author={post.frontmatter.author}
+            date={post.frontmatter.date}
+          />
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Article>
+      </main>
     </>
   )
 }
