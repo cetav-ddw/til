@@ -8,13 +8,12 @@ import "./index.scss"
 
 const IndexPage = ({ data }) => (
   <>
+    <SEO title="Inicio" />
     <Header />
-    <Article>
-      <SEO title="Inicio" />
+    <main>
       {data.allMarkdownRemark.edges.map(({ node: post }) => {
-        // post.frontmatter.tags; // is available now!
         return (
-          <div key={post.id}>
+          <Article key={post.id}>
             <h3 className="article__title">
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </h3>
@@ -27,10 +26,10 @@ const IndexPage = ({ data }) => (
               className="article__title--endline"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-          </div>
+          </Article>
         )
       })}
-    </Article>
+    </main>
   </>
 )
 
