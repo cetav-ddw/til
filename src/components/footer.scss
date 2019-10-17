@@ -1,0 +1,14 @@
+footer {
+  font-size: 14px;
+  max-width: 800px;
+  margin: 25px auto;
+
+  a:link,
+  a:visited {
+    color: #b98508;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}

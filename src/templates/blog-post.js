@@ -1,9 +1,11 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Link from "gatsby-link"
 import SEO from "../components/seo"
 import Author from "../components/author"
 import Article from "../components/article"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import "./blog-post.scss"
 
 export default function Template({ data }) {
@@ -18,14 +20,20 @@ export default function Template({ data }) {
           <Link to="/" className="article__line">
             Inicio
           </Link>
-          <h1 className="article__title">{post.frontmatter.title}</h1>
+          <h1 className="article__title article__title--bg">
+            {post.frontmatter.title}
+          </h1>
           <Author
             author={post.frontmatter.author}
             date={post.frontmatter.date}
           />
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            className="article__body"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
         </Article>
       </main>
+      <Footer />
     </>
   )
 }

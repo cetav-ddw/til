@@ -1,17 +1,71 @@
 @import '../helpers';
 
+// ToDo: renombrar clases o archivo?
+.article {
+  border-bottom: 6px solid #141d39;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 25px 0;
+}
+
+.article__body {
+  a:link, 
+  a:visited {
+    color: #b98508;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    height: auto;
+    margin: 25px 0;
+    max-width: 100%;
+  }
+  p {
+    display: block;
+    margin: 25px 0;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 25px;
+  }
+}
+
+.article__line {
+  color: #b98508;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .article__title {
+  color: $black;
   font-family: $fontTitle;
+  font-size: 2.25rem;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.article__link--bg,
+.article__title--bg {
   $font-size: 2.25rem;
-  font-size: $font-size;
   background-image: url('../images/background.svg');
-  display: inline;
   background-size: 95px;
   background-repeat-y: no-repeat;
   background-position-y: $font-size / 2.75;
+  color: $black;
+  text-decoration: none;
   transition: .5s;
 }
 
-a .article__title:hover {
+.article__link--bg:hover {
   background-position-y: 42px;
 }
