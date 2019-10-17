@@ -11,4 +11,8 @@ const Author = ({ author, date, additionalClass }) => (
   </small>
 )
 
+Author.defaultProps = {
+  additionalClass: "",
+}
+
 export default Author

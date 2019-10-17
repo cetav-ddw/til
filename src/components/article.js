@@ -1,5 +1,5 @@
 import React from "react"
-import "./article.scss"
+import "../templates/blog-post.scss"
 
 const Article = ({ children }) => <div className="article">{children}</div>
 

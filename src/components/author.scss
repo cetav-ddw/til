@@ -1,9 +1,18 @@
 @import '../helpers';
 
 .article__author {
-    display: block;
+  border-bottom: 2px solid $line;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 4px;
 }
 
 .author__link {
-    color: $link;
+  color: #b98508;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
