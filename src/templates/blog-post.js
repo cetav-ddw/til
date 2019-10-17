@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Link from "gatsby-link"
 import SEO from "../components/seo"
 import Author from "../components/author"
