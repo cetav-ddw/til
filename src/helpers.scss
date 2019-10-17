@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Lustria|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lustria&display=swap');
 
+// ToDo: usar nombres de variables descriptivas para colores
+$black: #333;
 $title: #fdc02f;
 $line: #dedede;
-$link:#641fe0;
-$darkPurple:#141d39;
+$link: #641fe0;
+$darkPurple: #141d39;
 $bg: #252525;
+
 $fontTitle: 'Lustria', serif;
-$fontText: 'Open Sans', serif;
+$fontText: 'Lato', Arial, sans-serif;

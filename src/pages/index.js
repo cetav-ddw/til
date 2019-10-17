@@ -4,33 +4,38 @@ import SEO from "../components/seo"
 import Author from "../components/author"
 import Article from "../components/article"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import "./index.scss"
 
 const IndexPage = ({ data }) => (
   <>
+    <SEO title="Inicio" />
     <Header />
-    <Article>
-      <SEO title="Inicio" />
+    <main>
       {data.allMarkdownRemark.edges.map(({ node: post }) => {
-        // post.frontmatter.tags; // is available now!
         return (
-          <div key={post.id}>
-            <h3 className="article__title">
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </h3>
+          <Article key={post.id}>
+            <h2 className="article__title">
+              <Link
+                to={post.frontmatter.path}
+                className="article__link article__link--bg"
+              >
+                {post.frontmatter.title}
+              </Link>
+            </h2>
             <Author
-              additionalClass="article__title--line"
               author={post.frontmatter.author}
               date={post.frontmatter.date}
             />
             <div
-              className="article__title--endline"
+              className="article__body"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-          </div>
+          </Article>
         )
       })}
-    </Article>
+    </main>
+    <Footer />
   </>
 )
 
