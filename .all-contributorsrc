@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "LuisArmando-TestCoder",
+      "name": "LuisArmando-TestCoder",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/37167842?v=4",
+      "profile": "https://codepen.io/LuisArmando-TC",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "til",
+  "projectOwner": "cetav-ddw",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
