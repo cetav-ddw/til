@@ -25,7 +25,7 @@
 
 ```---```
 
-6. Una vez tengás todo listo, debes hacer un pull request y esperá a que el administrador del repositorio te de feedback o mergee los cambios en master.
+6. Una vez tengás todo listo, debes hacer un pull request a ```master``` y esperá a que el administrador del repositorio te de feedback o haga un mergee de los cambios a master.
 
 ## Contributors ✨
 
