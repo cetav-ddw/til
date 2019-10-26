@@ -5,7 +5,7 @@ const Footer = () => (
   <footer>
     <p>
       Todos los días aprendemos algo nuevo.{" "}
-      <abbr title="Today I Learned">TIL</abbr> - CEATV es un proyecto de
+      <abbr title="Today I Learned">TIL</abbr> - CETAV es un proyecto de
       estudiantes del t&eacute;cnico de Diseño y Desarollo Web del{" "}
       <a href="http://parquelalibertad.org/cetav">CETAV</a>. El objetivo es
       registrar y catalogar lo que compartimos y aprendemos día a día, esperamos
