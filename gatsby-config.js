@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Today I Learned - CETAV`,
     description: `TIL, blog posts de los estudiantes de Web del Centro de Tecnología y Artes Visuales (CETAV)`,
-    author: `@leivajd`, // Agregar usuario de Twitter para TIL CETAV
+    author: `@leivajd`, // Agregar usuario de Twitter para CETAV
   },
   plugins: [
     `gatsby-plugin-sass`,
