@@ -3,7 +3,7 @@
 
 1. Cloná el repositorio
 2. En el ambiente local cambiá el branch a `master`.
-3. El blog usa archivos Markdown como fuente de datos, aquí una guía: https://www.markdownguide.org. Andá al directorio `/src/posts` y añadí un archivo de `.md` nuevo.
+3. El blog usa archivos Markdown como fuente de datos, aquí una guía: https://www.markdownguide.org. Andá al directorio `/src/posts` y añadí un archivo con extensi&oacute;n `.md`.
 4. El nombre del archivo debe tener este formato: nombreUsuario-fecha.md **(formato de la fecha: yyyy-mm-dd)**
 5. Los siguientes datos son requeridos, y deben estar al inicio del archivo:
 
